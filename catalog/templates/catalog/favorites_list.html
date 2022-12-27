@@ -1,0 +1,17 @@
+{%extends "base.html"%}
+
+{%block content%}
+<h1>Избранные книги</h1>
+
+  {%if favorites_list%}
+    <ul>
+      {% for favorite in favorites_list %}
+      <li>
+        {{favorite.favorite.title}}
+      </li>
+      {% endfor %}
+    </ul>
+  {%else%}
+    <p>У вас пока нет избранных книг</p>
+  {%endif%}
+{%endblock%}
